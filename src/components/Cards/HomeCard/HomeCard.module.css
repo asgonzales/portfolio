@@ -1,0 +1,52 @@
+.contHomeCard {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    color: black;
+    box-shadow: 0 0 0 15px var(--blue);
+    transition: all 0.2s ease;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+.contHomeCard:hover {
+    box-shadow: 0 0 0 25px var(--blue);
+}
+.contHomeCard > h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 2%;
+}
+.contHomeCard > p {
+    margin: 1%;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+    .contHomeCard {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--white);
+        color: black;
+        box-shadow: 0 0 0 10px var(--blue);
+        transition: all 0.2s ease;
+        font-family: 'Comfortaa';
+        text-align: center;
+    }
+    .contHomeCard > h3 {
+        font-size: 6vw;
+        font-weight: 600;
+        margin: 2%;
+    }
+    .contHomeCard > p {
+        margin: 1%;
+        font-size: 4vw;
+        font-weight: 400;
+    }
+}

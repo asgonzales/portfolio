@@ -1,0 +1,94 @@
+.contNavBar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2% 0 2%;
+    background-color: black;
+    overflow: hidden;
+    padding: 0 2%;
+    font-family: 'Comfortaa';
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 3% 1%;
+    transform: rotateZ(10deg);
+    transition: all 0.2s ease;
+}
+.link:hover {
+    box-shadow: 0 0 0 15px var(--blue);  
+}
+
+.link > p {
+    transform: rotateZ(-10deg);
+    transition: all 0.2s ease;
+}
+.activeLink {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5% 2%;
+    box-shadow: 0 0 0 15px var(--blue);  
+    transform: rotateZ(-10deg);  
+    transition: all 0.2s ease;
+}
+.activeLink > p {
+    transform: rotateZ(10deg);
+}
+.image {
+    transition: all 0.2s ease;
+}
+.image:hover {
+    filter: brightness(50%) sepia(100) saturate(100) hue-rotate(200deg);
+}
+
+@media screen and (max-width: 700px) {
+    .contNavBar {
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2% 0 2%;
+        background-color: black;
+        overflow: hidden;
+        padding: 0 2%;
+        font-family: 'Comfortaa';
+        font-size: 3vw;
+    }
+    
+    .link {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 3% 1%;
+        transform: rotateZ(10deg);
+        transition: all 0.2s ease;
+    }
+    
+    .link > p {
+        transform: rotateZ(-10deg);
+        transition: all 0.2s ease;
+    }
+    .activeLink {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 5% 2%;
+        box-shadow: 0 0 0 5px var(--blue);  
+        transform: rotateZ(-10deg);  
+        transition: all 0.2s ease;
+    }
+    .activeLink > p {
+        transform: rotateZ(10deg);
+    }
+    .image {
+        transition: all 0.2s ease;
+        width: 8vw;
+    }
+    .image:hover {
+        filter: brightness(50%) sepia(100) saturate(100) hue-rotate(200deg);
+    }
+}

@@ -1,0 +1,62 @@
+.contSkill {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3%;
+    background-color: white;
+    transition: all 0.2s ease;
+    transform: rotateX(-25deg);
+    box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    transform: rotateY(0deg) rotateX(0deg);
+    font-family: 'Comfortaa';
+}
+.contSkill:hover {
+    animation: cardSelected 3s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+.contImg {
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+@keyframes cardSelected {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+        box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+    }
+    20% {
+        transform: rotateX(25deg) rotateY(-25deg);
+        box-shadow: inset 0 0 15px -5px rgba(255, 255, 255, 1), 15px 15px 0 0 var(--white);
+    }
+    40% {
+        transform: rotateX(25deg) rotateY(25deg);
+        box-shadow: inset 0 0 15px -5px rgba(255, 255, 255, 1), -15px 15px 0 0 var(--white);
+    }
+    60% {
+        box-shadow: inset 25px 55px 15px -5px rgba(0, 0, 0, 0.1), -15px -15px 0 0 var(--white);
+        transform: rotateX(-25deg) rotateY(25deg);
+    }
+    80% {
+        box-shadow: inset -25px 55px 15px -5px rgba(0, 0, 0, 0.1), 15px -15px 0 0 var(--white);
+        transform: rotateX(-25deg) rotateY(-25deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+        box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+    }
+}

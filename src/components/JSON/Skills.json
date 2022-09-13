@@ -1,0 +1,58 @@
+[
+    {
+        "name": "HTML5",
+        "img": "/images/Icons/HTML5.png"
+    },
+    {
+        "name": "CSS",
+        "img": "/images/Icons/CSS.png"
+    },
+    {
+        "name": "React",
+        "img": "/images/Icons/React.png"
+    },
+    {
+        "name": "Redux",
+        "img": "/images/Icons/Redux.png"
+    },
+    {
+        "name": "Express",
+        "img": "/images/Icons/Express.png"
+    },
+    {
+        "name": "Sequelize",
+        "img": "/images/Icons/Sequelize.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "img": "/images/Icons/PostgreSQL.png"
+    },
+    {
+        "name": "NodeJS",
+        "img": "/images/Icons/nodeJS.png"
+    },
+    {
+        "name": "Github",
+        "img": "/images/Icons/Github.png"
+    },
+    {
+        "name": "Git",
+        "img": "/images/Icons/Git.png"
+    },
+    {
+        "name": "C#",
+        "img": "/images/Icons/Csharp.png"
+    },
+    {
+        "name": "MySQL",
+        "img": "/images/Icons/MySQL.png"
+    },
+    {
+        "name": "Photoshop",
+        "img": "/images/Icons/PS.png"
+    },
+    {
+        "name": "Blender",
+        "img": "/images/Icons/Blender.png"
+    }
+]
