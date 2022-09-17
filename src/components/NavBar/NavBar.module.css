@@ -1,42 +1,54 @@
 .contNavBar {
-    height: 60px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 2% 0 2%;
+    /* padding: 0 5% 0 25%; */
     background-color: black;
     overflow: hidden;
     padding: 0 2%;
     font-family: 'Comfortaa';
+    z-index: 5;
 }
 
 .link {
     text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 3% 1%;
-    transform: rotateZ(10deg);
+    color: grey;
+    font-weight: 700;
+    /* background-color: white; */
+    padding: 0;
+    margin: 0;
+    /* transform: rotateZ(10deg); */
     transition: all 0.2s ease;
 }
 .link:hover {
-    box-shadow: 0 0 0 15px var(--blue);  
+    /* box-shadow: 0 0 0 15px var(--blue);   */
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+    
 }
 
 .link > p {
-    transform: rotateZ(-10deg);
+    /* transform: rotateZ(-10deg);s */
     transition: all 0.2s ease;
+    margin: 6px;
 }
 .activeLink {
     text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 5% 2%;
-    box-shadow: 0 0 0 15px var(--blue);  
-    transform: rotateZ(-10deg);  
+    color: white;
+    border-bottom: 2px solid white;
+    /* background-color: white; */
+    /* padding: 5% 2%; */
+    /* box-shadow: 0 0 0 15px var(--blue);   */
+    /* transform: rotateZ(-10deg);   */
     transition: all 0.2s ease;
+    /* text-decoration: underline; */
 }
 .activeLink > p {
-    transform: rotateZ(10deg);
+    margin: 6px;
+    /* transform: rotateZ(10deg); */
 }
 .image {
     transition: all 0.2s ease;

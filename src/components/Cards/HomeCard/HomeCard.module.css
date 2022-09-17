@@ -4,16 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--white);
+    /* background-color: white; */
     color: black;
-    box-shadow: 0 0 0 15px var(--blue);
+    /* box-shadow: 0 0 0 15px var(--blue); */
     transition: all 0.2s ease;
     font-family: 'Comfortaa';
     text-align: center;
+    text-shadow: 2px 2px 20px black;
 }
-.contHomeCard:hover {
+/* .contHomeCard:hover {
     box-shadow: 0 0 0 25px var(--blue);
-}
+} */
 .contHomeCard > h3 {
     font-size: 36px;
     font-weight: 600;
@@ -32,12 +33,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--white);
+        /* background-color: white; */
         color: black;
-        box-shadow: 0 0 0 10px var(--blue);
+        /* box-shadow: 0 0 0 10px var(--blue); */
         transition: all 0.2s ease;
         font-family: 'Comfortaa';
         text-align: center;
+        text-shadow: 2px 2px 20px black;
+
     }
     .contHomeCard > h3 {
         font-size: 6vw;

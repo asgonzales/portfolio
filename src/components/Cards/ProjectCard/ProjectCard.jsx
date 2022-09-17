@@ -1,5 +1,5 @@
 import style from './ProjectCard.module.css';
-
+import ReactDOM from 'react-dom';
 
 
 
@@ -28,14 +28,15 @@ export default function ProjectCard ({project}) {
                 }
                 <div className={style.tech}>
                     {
-                        project.tech?.map(e => {
+                        project.tech?.map((e, y) => {
                             return (
-                                <span>{e}</span>
+                                <span key={y}>{e}</span>
                             )
                         })
                     }
                 </div>
             </div>
         </div>
+    // , document.getElementById('modals'))
     )
 }

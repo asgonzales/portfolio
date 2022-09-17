@@ -1,11 +1,11 @@
 [
     {
-        "name": "Wheater App",
-        "description": "A simple page that allows you to search different countries and their respective climate information. This was my first app where I learned to call an API.",
-        "api": "OpenWeatherMap",
-        "tech": ["React"],
-        "images": "/images/WeatherAppScreen/WACards.jpg",
-        "url": "https://weather-app-tau-beige.vercel.app/"
+        "name": "Plus Hardware e-commerce",
+        "description": "E-commerce made for hardware products. It has the Mercadopago payment method, hierarchy and restriction by user role (buyer, seller, admin), geolocation for sucursal, Auth with Google, Wishlits, reviews and purchase orders by user and mailing system. This was a grupal project where I was responsible for the auth with Google, part of the geolocaton system, hierarchy and restriction by user role and the design.",
+        "api": null,
+        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
+        "images": "/images/PlusHardwareScreen/Home.jpg",
+        "url": "https://ecommerce-soyhenry.ml/"
     },
     {
         "name": "Country App",
@@ -16,11 +16,11 @@
         "url": "https://countries-app-indol.vercel.app/"
     },
     {
-        "name": "Plus Hardware e-commerce",
-        "description": "E-commerce made for hardware products. It has the Mercadopago payment method, hierarchy and restriction by user role (buyer, seller, admin), geolocation for sucursal, Auth with Google, Wishlits, reviews and purchase orders by user and mailing system. This was a grupal project where I was responsible for the auth with Google, part of the geolocaton system, hierarchy and restriction by user role and the design.",
-        "api": null,
-        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
-        "images": "/images/PlusHardwareScreen/Home.jpg",
-        "url": "https://ecommerce-soyhenry.ml/"
+        "name": "Wheater App",
+        "description": "A simple page that allows you to search different countries and their respective climate information. This was my first app where I learned to call an API.",
+        "api": "OpenWeatherMap",
+        "tech": ["React"],
+        "images": "/images/WeatherAppScreen/WACards.jpg",
+        "url": "https://weather-app-tau-beige.vercel.app/"
     }
 ]
