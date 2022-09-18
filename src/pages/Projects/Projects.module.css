@@ -1,12 +1,8 @@
 .contProjects {
-    /* background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); */
-    /* padding: 2% 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    /* box-shadow: inset 0 15px 15px -10px  var(--blue); */
-    /* overflow: hidden; */
     font-family: 'Comfortaa';
     height: 100vh;
 }
@@ -17,7 +13,27 @@
 }
 .contCards {
     display: flex;
-    /* flex-direction: column; */
+}
 
-    
+@media screen and (max-width: 700px) {
+    .contProjects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: 'Comfortaa';
+        height: 100vh;
+    }
+    .contTitle {
+        height: 10vh;
+        color: black;
+        margin-top: 10vh;
+    }
+    .contCards {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+    }    
 }

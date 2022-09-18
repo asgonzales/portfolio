@@ -175,59 +175,140 @@
 
 
 @media screen and (max-width: 700px) {
-    .contProjectCard {
-        align-self: center;
+    .contBack {
+        background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+    }
+    .contProjectCard {
+        border-radius: 20px;
+        width: 60rem;
+        height: 30rem;
         margin: 2% 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         background-color: white;
         color: black;
         overflow: hidden;
         transition: all 0.2s ease;
         font-family: 'Comfortaa';
+        padding: 3%;
+        overflow-y: scroll;
+    }
+    /* .contProjectCard > div {
+        border: 1px solid red;
+    } */
+    .contExit {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 10%;
+    }
+    .divButton {
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .divButton > button {
+        background-color: transparent;
+        border: none;
+        height: 100%;
+    }
+    .divButton > button:hover {
+        cursor: pointer;
+    }
+    .divButton > button > img {
+        height: 100%;
+    }
+    .divButton > button:hover > img {
+        filter: brightness(.9) invert(0.4) sepia(1) hue-rotate(200deg) saturate(500%) drop-shadow(0 0 15px var(--blue));
+    }
+    .contProject {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90%;
+        gap: 5vh;
+    }
+    .projectLeft {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* height: 100%; */
+    }
+    .projectRight {
+        padding: 2%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        /* height: 100%; */
     }
     .contImage {
+        height: 15rem;
+        width: 100%;
         overflow: hidden;
-        height: 40%;
-        width: 100%;
         transition: all 0.2s ease;
-        position: relative;
-    }
-    .goToButton {
-        position: absolute;
-        background-color: transparent;
-        color: transparent;
-        border: none;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        transition: all 0.2s ease;
-    }
-    .contImage:hover > .goToButton {
-        background-color: white;
-        cursor: pointer;
-        box-shadow: inset 0 0 15px var(--blue),
-        inset 0 0 15px var(--blue);
-        color: black;
-        font-size: 6vw;
-        border: none;
-        
     }
     .contImage > img {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        margin: 0;
+        animation: scaleImage 3s infinite;
+    }
+    .buttonsLinks {
+        height: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .buttonsLinks > button {
+        padding: 2%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 45%;
+        font-family: 'Comfortaa';
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .buttonsLinks > button > img {
+        width: 2rem;
+        transition: all 0.2s ease;
+    }
+    .buttonsLinks > button:hover {
+        box-shadow: 0 0 15px var(--blue);
+        cursor: pointer;
     }
     .contInfo {
         padding: 2%;
         border-radius: 0 0 30px 30px;
-        height: 60%;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -235,6 +316,8 @@
         align-items: center;
         transition: all 0.2s ease;
         text-align: center;
+        gap: 5vh;
+        padding-bottom: 2vh;
     }
     .contInfo > h2 {
         margin: 0;
@@ -254,18 +337,7 @@
         border-radius: 10px;
         margin: 1%;
         padding: 1%;
-    }
-    
-    .contProjectCard:hover {
-        box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
-    }
-    .contProjectCard:hover > .contInfo > .tech > span {
         background-color: var(--blue);
         color: white;
-    }
-    
-    .contProjectCard:hover > .contImage > img {
-        animation: scaleImage 3s infinite;
-    }
-    
+    }  
 }
