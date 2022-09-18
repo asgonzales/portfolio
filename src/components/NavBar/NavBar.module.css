@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* padding: 0 5% 0 25%; */
     background-color: black;
     overflow: hidden;
     padding: 0 2%;
@@ -17,22 +16,17 @@
     text-decoration: none;
     color: grey;
     font-weight: 700;
-    /* background-color: white; */
     padding: 0;
     margin: 0;
-    /* transform: rotateZ(10deg); */
     transition: all 0.2s ease;
 }
 .link:hover {
-    /* box-shadow: 0 0 0 15px var(--blue);   */
-    /* text-decoration: underline; */
     border-bottom: 2px solid white;
     background: linear-gradient(0deg, rgb(100, 100, 100) 0%, black 50%)
     
 }
 
 .link > p {
-    /* transform: rotateZ(-10deg);s */
     transition: all 0.2s ease;
     margin: 6px;
 }
@@ -40,16 +34,10 @@
     text-decoration: none;
     color: white;
     border-bottom: 2px solid white;
-    /* background-color: white; */
-    /* padding: 5% 2%; */
-    /* box-shadow: 0 0 0 15px var(--blue);   */
-    /* transform: rotateZ(-10deg);   */
     transition: all 0.2s ease;
-    /* text-decoration: underline; */
 }
 .activeLink > p {
     margin: 6px;
-    /* transform: rotateZ(10deg); */
 }
 .image {
     transition: all 0.2s ease;
@@ -60,48 +48,51 @@
 
 @media screen and (max-width: 700px) {
     .contNavBar {
-        height: 5vh;
+        height: 50px;
+        position: fixed;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        padding: 0 2% 0 2%;
         background-color: black;
         overflow: hidden;
-        padding: 0 2%;
+        padding: 0 15vw 0 0;
         font-family: 'Comfortaa';
-        font-size: 3vw;
+        z-index: 5;
     }
     
     .link {
         text-decoration: none;
-        color: black;
-        background-color: white;
-        padding: 3% 1%;
-        transform: rotateZ(10deg);
+        color: grey;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
         transition: all 0.2s ease;
+    }
+    .link:hover {
+        border-bottom: 2px solid white;
+        background: linear-gradient(0deg, rgb(100, 100, 100) 0%, black 50%)
+        
     }
     
     .link > p {
-        transform: rotateZ(-10deg);
         transition: all 0.2s ease;
+        margin: 6px;
     }
     .activeLink {
         text-decoration: none;
-        color: black;
-        background-color: white;
-        padding: 5% 2%;
-        box-shadow: 0 0 0 5px var(--blue);  
-        transform: rotateZ(-10deg);  
+        color: white;
+        border-bottom: 2px solid white;
         transition: all 0.2s ease;
     }
     .activeLink > p {
-        transform: rotateZ(10deg);
+        margin: 6px;
     }
     .image {
-        transition: all 0.2s ease;
-        width: 8vw;
+        /* transition: all 0.2s ease; */
+        display: none;
     }
-    .image:hover {
+    /* .image:hover {
         filter: brightness(50%) sepia(100) saturate(100) hue-rotate(200deg);
-    }
+    } */
 }
