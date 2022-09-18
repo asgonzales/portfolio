@@ -27,6 +27,7 @@
     /* box-shadow: 0 0 0 15px var(--blue);   */
     /* text-decoration: underline; */
     border-bottom: 2px solid white;
+    background: linear-gradient(0deg, rgb(100, 100, 100) 0%, black 50%)
     
 }
 

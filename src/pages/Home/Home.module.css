@@ -9,11 +9,49 @@
     /* background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); */
     height: 100vh;
 }
+/* .contHome > div {
+    border: 1px solid green;
+} */
+.divImg {
+    /* border: 1px solid red; */
+    /* background-color: var(--blue); */
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divText {
+    position: absolute;
+    /* border: 1px solid green; */
+    background-color: white;
+    box-shadow: -30rem 0 0 0 white;
+    /* justify-self: flex-start; */
+    left: 0;
+    /* top: 200px; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transform: skew(30deg);
+}
+.divText > div {
+    /* border: 1px solid red; */
+    transform: skew(-30deg);
+    /* margin-left: 50px; */
+    /* left: 50px; */
+    align-self: flex-end;
+    margin-bottom: 10rem;
+}
 .contImage {
-    width: 10%;
+    /* border: 1px solid red; */
+    /* justify-self: flex-end; */
+    margin-left: 50rem;
+    width: 30%;
     padding: 10px;
     background-color: var(--white);
-    border-radius: 100px;
+    border-radius: 100%;
     animation: rotateImage 4s linear infinite;
     transition: all 0.2s ease;
 }
@@ -22,7 +60,7 @@
 
 }
 .contImage > img {
-    border-radius: 100px;
+    border-radius: 100%;
     width: 100%;
     height: 100%;
 }

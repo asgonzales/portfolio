@@ -16,10 +16,16 @@ export default function Home () {
 
     return (
         <div className={style.contHome}>
-            <div className={style.contImage}>
-                <img title='I like cats :3' src={logo} alt="logo" />
+            <div className={style.divImg}>
+                <div className={style.contImage}>
+                    <img title='I like cats :3' src={logo} alt="logo" />
+                </div>
             </div>
-           <HomeCard/>
+            <div className={style.divText}>
+                <div>
+                    <HomeCard/>
+                </div>
+            </div>
         </div>
     )
 }

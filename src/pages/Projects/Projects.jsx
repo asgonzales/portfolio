@@ -2,7 +2,7 @@ import style from './Projects.module.css';
 import data from '../../components/JSON/Projects.json';
 import ProjectCard from '../../components/Cards/ProjectCard/ProjectCard.jsx';
 import { useEffect } from 'react';
-import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
+import ProjectPreview from '../../components/Cards/ProjectPreview/ProjectPreview';
 
 
 

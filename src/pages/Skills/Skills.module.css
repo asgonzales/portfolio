@@ -1,5 +1,6 @@
 .contSkills {
     /* background: linear-gradient(113deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); */
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +8,7 @@
     /* box-shadow: inset 0 15px 15px -10px  var(--blue); */
 }
 .contTitle {
-    color: white;
+    color: black;
     margin: 2%;
 }
 .contCards {

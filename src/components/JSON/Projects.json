@@ -1,11 +1,12 @@
 [
     {
-        "name": "Plus Hardware e-commerce",
+        "name": "Plus Hardware e‑commerce",
         "description": "E-commerce made for hardware products. It has the Mercadopago payment method, hierarchy and restriction by user role (buyer, seller, admin), geolocation for sucursal, Auth with Google, Wishlits, reviews and purchase orders by user and mailing system. This was a grupal project where I was responsible for the auth with Google, part of the geolocaton system, hierarchy and restriction by user role and the design.",
         "api": null,
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
         "images": "/images/PlusHardwareScreen/Home.jpg",
-        "url": "https://ecommerce-soyhenry.ml/"
+        "url": "https://ecommerce-soyhenry.ml/",
+        "repo": "https://github.com/asgonzales/PlusHardware"
     },
     {
         "name": "Country App",
@@ -13,7 +14,8 @@
         "api": "REST Countries",
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "REST API"],
         "images": "/images/CountryAppScreen/Landing.jpg",
-        "url": "https://countries-app-indol.vercel.app/"
+        "url": "https://countries-app-indol.vercel.app/",
+        "repo": "https://github.com/asgonzales/Country_App-PI"
     },
     {
         "name": "Wheater App",
@@ -21,6 +23,7 @@
         "api": "OpenWeatherMap",
         "tech": ["React"],
         "images": "/images/WeatherAppScreen/WACards.jpg",
-        "url": "https://weather-app-tau-beige.vercel.app/"
+        "url": "https://weather-app-tau-beige.vercel.app/",
+        "repo": "https://github.com/asgonzales/Weather_App"
     }
 ]
