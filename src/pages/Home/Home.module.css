@@ -17,7 +17,7 @@
     align-items: center;
 }
 .contImage {
-    margin-left: 50rem;
+    margin-left: 50%;
     width: 30%;
     padding: 10px;
     background-color: var(--white);
@@ -35,6 +35,8 @@
     height: 100%;
 }
 .divText {
+    width: 60%;
+    /* border: 1px solid red; */
     position: absolute;
     background-color: white;
     box-shadow: -30rem 0 0 0 white;
@@ -47,7 +49,7 @@
 .divText > div {
     transform: skew(-30deg);
     align-self: flex-end;
-    margin-bottom: 10rem;
+    margin-bottom: 20%;
 }
 
 @keyframes rotateImage {
