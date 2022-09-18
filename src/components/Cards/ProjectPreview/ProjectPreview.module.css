@@ -5,6 +5,7 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
 .divImg {
     width: 100%;
@@ -102,6 +103,7 @@
         position: relative;
         border-radius: 20px;
         overflow: hidden;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
     }
     .divImg {
         width: 100%;
