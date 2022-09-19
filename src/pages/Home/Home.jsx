@@ -1,6 +1,6 @@
 import HomeCard from '../../components/Cards/HomeCard/HomeCard';
 import style from './Home.module.css';
-import logo from '../../media/negative.png'
+import logo from '../../media/negative.svg'
 
 
 

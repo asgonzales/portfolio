@@ -6,7 +6,9 @@
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
         "images": "/images/PlusHardwareScreen/Home.jpg",
         "url": "https://ecommerce-soyhenry.ml/",
-        "repo": "https://github.com/asgonzales/PlusHardware"
+        "repo": "https://github.com/asgonzales/PlusHardware",
+        "desktop": true,
+        "mobile": false
     },
     {
         "name": "Country App",
@@ -15,7 +17,9 @@
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "REST API"],
         "images": "/images/CountryAppScreen/Landing.jpg",
         "url": "https://countries-app-indol.vercel.app/",
-        "repo": "https://github.com/asgonzales/Country_App-PI"
+        "repo": "https://github.com/asgonzales/Country_App-PI",
+        "desktop": true,
+        "mobile": true
     },
     {
         "name": "Wheater App",
@@ -24,6 +28,8 @@
         "tech": ["React"],
         "images": "/images/WeatherAppScreen/WACards.jpg",
         "url": "https://weather-app-tau-beige.vercel.app/",
-        "repo": "https://github.com/asgonzales/Weather_App"
+        "repo": "https://github.com/asgonzales/Weather_App",
+        "desktop": true,
+        "mobile": false
     }
 ]
