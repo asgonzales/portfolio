@@ -7,6 +7,7 @@ import Home from './pages/Home/Home.jsx';
 import Skills from './pages/Skills/Skills.jsx';
 import AboutMe from './pages/AboutMe/AboutMe.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/projects' element={<Projects/>} />
         <Route path='/skills' element={<Skills/>} />
         <Route path='/aboutme' element={<AboutMe/>} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
       <Footer/>
     </div>
