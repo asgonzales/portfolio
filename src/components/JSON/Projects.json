@@ -3,7 +3,7 @@
         "name": "FinnApp",
         "description": "A simple application that helps you to control your expenses. You cand add, modify and delete an operation and see the total cash available. App made as challenge from Alkemy.",
         "api": null,
-        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "REST API", "Cookies"],
+        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "REST API", "Cookies", "Mobile First", "Dark Mode"],
         "images": "/images/FinnApp/FinnApp.jpg",
         "url": "https://finnapp.vercel.app/",
         "repo": "https://github.com/asgonzales/FullStackChallenge-Alkemy",
