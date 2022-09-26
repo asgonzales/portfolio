@@ -1,5 +1,16 @@
 [
     {
+        "name": "FinnApp",
+        "description": "A simple application that helps you to control your expenses. You cand add, modify and delete an operation and see the total cash available. App made as challenge from Alkemy.",
+        "api": null,
+        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "REST API", "Cookies"],
+        "images": "/images/FinnApp/FinnApp.jpg",
+        "url": "https://finnapp.vercel.app/",
+        "repo": "https://github.com/asgonzales/FullStackChallenge-Alkemy",
+        "desktop": true,
+        "mobile": true
+    },
+    {
         "name": "Plus Hardware e‑commerce",
         "description": "E-commerce made for hardware products. It has the Mercadopago payment method, hierarchy and restriction by user role (buyer, seller, admin), geolocation for sucursal, Auth with Google, Wishlits, reviews and purchase orders by user and mailing system. This was a grupal project where I was responsible for the auth with Google, part of the geolocaton system, hierarchy and restriction by user role and the design.",
         "api": null,
