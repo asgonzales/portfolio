@@ -20,6 +20,9 @@
     font-size: 2em;
     font-weight: 400;
 }
+.contHomeCard > span {
+    font-style: italic;
+}
 @media screen and (max-width: 1200px) {
     .contHomeCard > h3 {
         font-size: 2em;

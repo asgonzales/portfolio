@@ -8,6 +8,7 @@ import Skills from './pages/Skills/Skills.jsx';
 import AboutMe from './pages/AboutMe/AboutMe.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import NotFound from './pages/NotFound/NotFound';
+import CatHead from './three/CatHead/CatHead';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/projects' element={<Projects/>} />
         <Route path='/skills' element={<Skills/>} />
         <Route path='/aboutme' element={<AboutMe/>} />
+        {/* <Route path='/cathead' element={<CatHead />} /> */}
         <Route path='*' element={<NotFound/>} />
       </Routes>
       <Footer/>
