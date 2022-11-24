@@ -1,5 +1,16 @@
 [
     {
+        "name": "Cat Wiki",
+        "description": "An application where you can search for cat images and information about breeds.",
+        "api": "The Cat API",
+        "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API", "Mobile First"],
+        "images": "/images/CatWiki/CatWiki.jpg",
+        "url": "https://catwiki-tau.vercel.app/",
+        "repo": "https://github.com/asgonzales/catwiki",
+        "desktop": true,
+        "mobile": true
+    },
+    {
         "name": "FinnApp",
         "description": "A simple application that helps you to control your expenses. You cand add, modify and delete an operation, see the total cash available and search in the history. App made as challenge from Alkemy. I also added features like autentication with Google, token sent in cookie, refresh jwt and statistics with charts.",
         "api": null,

@@ -12,6 +12,10 @@
         "img": "/images/Icons/React.png"
     },
     {
+        "name": "Typescript",
+        "img": "/images/Icons/Typescript.png"
+    },
+    {
         "name": "Redux",
         "img": "/images/Icons/Redux.png"
     },
