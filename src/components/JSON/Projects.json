@@ -27,8 +27,8 @@
         "api": null,
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
         "images": "/images/PlusHardwareScreen/Home.jpg",
-        "url": "https://ecommerce-soyhenry.ml/",
-        "repo": "https://github.com/asgonzales/PlusHardware",
+        "url": "https://plushardwarenew.vercel.app/",
+        "repo": "https://github.com/asgonzales/PlusHardwareNew",
         "desktop": true,
         "mobile": false
     },
