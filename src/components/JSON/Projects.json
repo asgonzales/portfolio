@@ -1,4 +1,15 @@
-[
+﻿[
+    {
+        "name": "MovieApp",
+        "description": "An application where you can search for information about movies and series.",
+        "api": null,
+        "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API"],
+        "images": "/images/MovieApp/MovieApp.jpg",
+        "url": "https://netflix-clon-app.vercel.app/",
+        "repo": "https://github.com/asgonzales/Netflix-clon-app",
+        "desktop": true,
+        "mobile": false
+    },
     {
         "name": "Cat Wiki",
         "description": "An application where you can search for cat images and information about breeds.",
