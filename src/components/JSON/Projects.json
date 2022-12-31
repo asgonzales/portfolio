@@ -5,7 +5,7 @@
         "api": null,
         "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API"],
         "images": "/images/MovieApp/MovieApp.jpg",
-        "url": "https://netflix-clon-app.vercel.app/",
+        "url": "https://movieapp-asgonzales.vercel.app/",
         "repo": "https://github.com/asgonzales/Netflix-clon-app",
         "desktop": true,
         "mobile": false
