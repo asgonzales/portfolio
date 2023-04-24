@@ -1,62 +1,62 @@
 [
     {
         "name": "HTML5",
-        "img": "/src/assets/ProjectsData/skillIcons/HTML5.png"
+        "img": "/ProjectsData/skillIcons/HTML5.png"
     },
     {
         "name": "CSS",
-        "img": "/src/assets/ProjectsData/skillIcons/CSS.png"
+        "img": "/ProjectsData/skillIcons/CSS.png"
     },
     {
         "name": "React",
-        "img": "/src/assets/ProjectsData/skillIcons/React.png"
+        "img": "/ProjectsData/skillIcons/React.png"
     },
     {
         "name": "Typescript",
-        "img": "/src/assets/ProjectsData/skillIcons/Typescript.png"
+        "img": "/ProjectsData/skillIcons/Typescript.png"
     },
     {
         "name": "Redux",
-        "img": "/src/assets/ProjectsData/skillIcons/Redux.png"
+        "img": "/ProjectsData/skillIcons/Redux.png"
     },
     {
         "name": "Express",
-        "img": "/src/assets/ProjectsData/skillIcons/Express.png"
+        "img": "/ProjectsData/skillIcons/Express.png"
     },
     {
         "name": "Sequelize",
-        "img": "/src/assets/ProjectsData/skillIcons/Sequelize.png"
+        "img": "/ProjectsData/skillIcons/Sequelize.png"
     },
     {
         "name": "PostgreSQL",
-        "img": "/src/assets/ProjectsData/skillIcons/PostgreSQL.png"
+        "img": "/ProjectsData/skillIcons/PostgreSQL.png"
     },
     {
         "name": "NodeJS",
-        "img": "/src/assets/ProjectsData/skillIcons/nodeJS.png"
+        "img": "/ProjectsData/skillIcons/nodeJS.png"
     },
     {
         "name": "Github",
-        "img": "/src/assets/ProjectsData/skillIcons/Github.png"
+        "img": "/ProjectsData/skillIcons/Github.png"
     },
     {
         "name": "Git",
-        "img": "/src/assets/ProjectsData/skillIcons/Git.png"
+        "img": "/ProjectsData/skillIcons/Git.png"
     },
     {
         "name": "C#",
-        "img": "/src/assets/ProjectsData/skillIcons/Csharp.png"
+        "img": "/ProjectsData/skillIcons/Csharp.png"
     },
     {
         "name": "MySQL",
-        "img": "/src/assets/ProjectsData/skillIcons/MySQL.png"
+        "img": "/ProjectsData/skillIcons/MySQL.png"
     },
     {
         "name": "Photoshop",
-        "img": "/src/assets/ProjectsData/skillIcons/PS.png"
+        "img": "/ProjectsData/skillIcons/PS.png"
     },
     {
         "name": "Blender",
-        "img": "/src/assets/ProjectsData/skillIcons/Blender.png"
+        "img": "/ProjectsData/skillIcons/Blender.png"
     }
 ]
