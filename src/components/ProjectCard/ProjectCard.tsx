@@ -66,7 +66,7 @@ export const ProjectCard = React.memo(({ data, modalDiff, first, last, fillBigCa
                 <img src={data.images[0]} alt={data.name} />
             }
             {
-                data.name !== 'none' && openPortal &&
+                data.name !== 'none' &&
                 <MiniCard fillBigCard={fillBigCard} data={data} position={ {top: offsets.top, left: offsets.left + diff}} close={closePortal} first={first} last={last}/>
             }
         </div>
