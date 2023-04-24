@@ -1,0 +1,326 @@
+.ContMiniCard {
+    cursor: pointer;
+    width: 45vw;
+    height: 25.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+
+}
+.Card {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    margin: 3.8rem;
+    transition: all .2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.ContMiniCard:hover > .first {
+    transform: translateX(calc((318px - 45vw) / 2));
+}
+.ContMiniCard:hover > .last {
+    transform: translateX(calc((45vw - 318px) / 2));
+}
+.ContMiniCard:hover > .Card {
+    z-index: 5;
+    transition-delay: .5s;
+    width: 318px;
+    height: 375px;
+    box-shadow: 0 0 10px 1px black;
+    background-color: var(--backColor);
+}
+.ContMiniCard:hover > .Card > .texto {
+    transition-delay: .5s;
+    width: 100%;
+    height: 52%;
+    filter: opacity(1);
+    overflow: visible;
+    z-index: 18;
+}
+.ContMiniCard:hover > .Card > .imagen {
+    height: 48%;
+    transition-delay: .5s;
+}
+.imagen {
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.imagen > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    z-index: 0;
+}
+.imagen > h1 {
+    position: absolute;
+    bottom: 0;
+    margin: .5rem;
+    width: 90%;
+    font-family: 'Noto Sans';
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    filter: opacity(.3);
+    transition: all .2s ease;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+    filter: opacity(1);
+    pointer-events: none;
+    background-color: black;
+    transition: all 1s ease;
+    animation: bornVideo 1s linear;
+}
+.videoHidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: opacity(0);
+    transition: all 1s ease;
+}
+@keyframes born {
+    0% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(1);
+    }
+}
+@keyframes bornVideo {
+    0% {
+        filter: opacity(0)
+    }
+    100% {
+        filter: opacity(1);
+    }
+}
+.ContMiniCard:hover > .Card > .imagen > h1 {
+    filter: opacity(1);
+    transition-delay: .5s;
+}
+.texto {
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
+    filter: opacity(0);
+    transition: all .2s ease;
+    background-color: var(--backColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--textColor);
+    border-radius: 0 0 5px 5px;
+    z-index: 0;
+}
+.controls {
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    /* border: 1px solid red */
+}
+.controls > div {
+    /* border: 1px solid red; */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.firstControl {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    /* filter: invert(1); */
+}
+.lastControl {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: invert(1);
+    transform: rotateZ(-90deg);
+}
+.controls > div:first-child {
+    border-radius: 20%;
+    width: 45px;
+    margin-left: 1rem;
+    background-color: white;
+    transition: all .2s ease;
+    /* border: 2px solid rgba(255, 255, 255, .5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controls > div:first-child:hover {
+    filter: opacity(.8);
+}
+.controls > div:first-child > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.able {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: invert(1);
+}
+.disable {
+    filter: invert(.5);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+/* .controls > div:first-child:hover {
+    background-color: rgba(255, 255, 255, .85);
+    border: 2px solid rgba(255, 255, 255, .85);
+} */
+/* .controls > div:nth-child(3):hover > .likes{
+    filter: opacity(1);
+    transform: scale(1);
+    visibility: visible;
+    transition-delay: .5s;
+} */
+.controls > div:last-child {
+    margin-right: 1.4rem;
+    margin-left: auto;
+    border: 2px solid grey;
+    border-radius: 50%;
+}
+.controls > div:last-child:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+.controls > div:hover > .popup {
+    filter: opacity(1);
+    visibility: visible;
+    transition-delay: .2s;
+}
+.firstLine {
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.rate {
+    color: var(--greenColor);
+}
+.firstLine > span {
+    margin: 0 .5rem;
+}
+.secondLine {
+    /* border: 1px solid red; */
+    /* margin-top: 10px; */
+    /* width: 90%; */
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+.secondLine > h2 {
+    font-size: 2rem;
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    /* border: 1px solid red; */
+    margin: 0;
+    text-align: center;
+}
+.secondLine > div {
+    display: flex;
+    align-items: center;
+}
+.dot {
+    border: 1px solid white;
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 5px;
+    filter: opacity(.4);
+}
+
+/* Small devices */
+@media screen and (min-width: 576px) {
+    .ContMiniCard {
+        width: 31vw;
+        height: 17.5vw;
+    }
+    .ContMiniCard:hover > .first {
+        transform: translateX(calc((318px - 31vw) / 2));
+    }
+    .ContMiniCard:hover > .last {
+        transform: translateX(calc((31vw - 318px) / 2));
+    }
+}
+/* Medium devices */
+@media screen and (min-width: 768px) {
+    .ContMiniCard {
+        width: 23vw;
+        height: 12.9vw;
+    }
+    .ContMiniCard:hover > .first {
+        transform: translateX(calc((318px - 23vw) / 2));
+    }
+    .ContMiniCard:hover > .last {
+        transform: translateX(calc((23vw - 318px) / 2));
+    }
+}
+/* Large devices */
+@media screen and (min-width: 992px) {
+    .ContMiniCard {
+        width: 17.5vw;
+        height: 9.88vw;
+    }
+}
+/* Extra large devices */
+@media screen and (min-width: 1200px) {
+    .ContMiniCard {
+        width: 14.8vw;
+        height: 8.36vw;
+    }
+    .ContMiniCard:hover > .first {
+        transform: translateX(calc((318px - 14.8vw) / 2));
+    }
+    .ContMiniCard:hover > .last {
+        transform: translateX(calc((14.8vw - 318px) / 2));
+    }
+}

@@ -1,0 +1,134 @@
+﻿[
+    {
+        "name": "MovieApp",
+        "description": "An application where you can search for information about movies and series. Netflix Clone",
+        "api": "",
+        "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API", "JWT", "reCaptcha", "NodeMailer", "Mongoose", "MongoDB"],
+        "images": ["/src/assets/ProjectsData/images/MovieApp/1.jpg", "/src/assets/ProjectsData/images/MovieApp/2.jpg", "/src/assets/ProjectsData/images/MovieApp/3.jpg", "/src/assets/ProjectsData/images/MovieApp/4.jpg", "/src/assets/ProjectsData/images/MovieApp/5.jpg", "/src/assets/ProjectsData/images/MovieApp/6.jpg", "/src/assets/ProjectsData/images/MovieApp/7.jpg", "/src/assets/ProjectsData/images/MovieApp/1.jpg"],
+        "url": "https://movieappasgonzales.vercel.app/",
+        "repo": "https://github.com/asgonzales/Netflix-clon-app",
+        "desktop": true,
+        "mobile": false
+    },
+    {
+        "name": "Cat Wiki",
+        "description": "An application where you can search for cat images and information about breeds.",
+        "api": "The Cat API",
+        "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API", "Mobile First"],
+        "images": ["/src/assets/ProjectsData/images/CatWiki/1.jpg", "/src/assets/ProjectsData/images/CatWiki/2.jpg", "/src/assets/ProjectsData/images/CatWiki/3.jpg", "/src/assets/ProjectsData/images/CatWiki/4.jpg"],
+        "url": "https://catwiki-tau.vercel.app/",
+        "repo": "https://github.com/asgonzales/catwiki",
+        "desktop": true,
+        "mobile": true
+    },
+    {
+        "name": "FinnApp",
+        "description": "A simple application that helps you to control your expenses. You cand add, modify and delete an operation, see the total cash available and search in the history. App made as challenge from Alkemy. I also added features like autentication with Google, token sent in cookie, refresh jwt and statistics with charts.",
+        "api": "",
+        "tech": ["React", "Redux", "GoogleAuth", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "REST API", "Cookies", "Mobile First", "Dark Mode"],
+        "images": ["/src/assets/ProjectsData/images/FinnApp/1.jpg", "/src/assets/ProjectsData/images/FinnApp/2.jpg", "/src/assets/ProjectsData/images/FinnApp/3.jpg", "/src/assets/ProjectsData/images/FinnApp/4.jpg"],
+        "url": "https://finnapp.vercel.app/",
+        "repo": "https://github.com/asgonzales/FullStackChallenge-Alkemy",
+        "desktop": true,
+        "mobile": true
+    },
+    {
+        "name": "Plus Hardware e‑commerce",
+        "description": "E-commerce made for hardware products. It has the Mercadopago payment method, hierarchy and restriction by user role (buyer, seller, admin), geolocation for sucursal, Auth with Google, Wishlits, reviews and purchase orders by user and mailing system. This was a grupal project where I was responsible for the auth with Google, part of the geolocaton system, hierarchy and restriction by user role and the design.",
+        "api": "",
+        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
+        "images": ["/src/assets/ProjectsData/images/PlusHardware/1.jpg"],
+        "url": "https://plushardwarenew.vercel.app/",
+        "repo": "https://github.com/asgonzales/PlusHardwareNew",
+        "desktop": true,
+        "mobile": false
+    },
+    {
+        "name": "3D Portfolio",
+        "description": "My 3D Portfolio",
+        "api": "",
+        "tech": ["React", "Redux", "ThreeJS", "React Three Fiber"],
+        "images": ["/src/assets/ProjectsData/images/3DPortfolio/1.jpg", "/src/assets/ProjectsData/images/3DPortfolio/2.jpg", "/src/assets/ProjectsData/images/3DPortfolio/3.jpg", "/src/assets/ProjectsData/images/3DPortfolio/4.jpg", "/src/assets/ProjectsData/images/3DPortfolio/5.jpg", "/src/assets/ProjectsData/images/3DPortfolio/6.jpg"],
+        "url": "https://asgonzales-3d-portfolio.vercel.app/",
+        "repo": "",
+        "desktop": true,
+        "mobile": true
+    },
+    {
+        "name": "2D Portfolio",
+        "description": "My 2D Portfolio",
+        "api": "",
+        "tech": ["React"],
+        "images": ["/src/assets/ProjectsData/images/2DPortfolio/1.jpg", "/src/assets/ProjectsData/images/2DPortfolio/2.jpg", "/src/assets/ProjectsData/images/2DPortfolio/3.jpg", "/src/assets/ProjectsData/images/2DPortfolio/4.jpg"],
+        "url": "https://portfolio-asgonzales.vercel.app/",
+        "repo": "https://github.com/asgonzales/portfolio",
+        "desktop": true,
+        "mobile": true
+    },
+    {
+        "name": "Country App",
+        "description": "A SPA where you can search and filter different countries, see their information and create different toristic activities for each one. This was my second project where I learned how to use PostgreSQL.",
+        "api": "REST Countries",
+        "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "REST API"],
+        "images": ["/src/assets/ProjectsData/images/CountryApp/1.jpg"],
+        "url": "https://countries-app-indol.vercel.app/",
+        "repo": "https://github.com/asgonzales/Country_App-PI",
+        "desktop": true,
+        "mobile": true
+    },
+    {
+        "name": "Wheater App",
+        "description": "A simple page that allows you to search different countries and their respective climate information. This was my first app where I learned to call an API.",
+        "api": "OpenWeatherMap",
+        "tech": ["React"],
+        "images": ["/src/assets/ProjectsData/images/WeatherApp/1.jpg"],
+        "url": "https://weather-app-tau-beige.vercel.app/",
+        "repo": "https://github.com/asgonzales/Weather_App",
+        "desktop": true,
+        "mobile": false
+    },
+    {
+        "name": "none",
+        "description": "",
+        "api": "",
+        "tech": [""],
+        "images": [""],
+        "url": "",
+        "repo": "",
+        "desktop": false,
+        "mobile": false
+    },
+    {
+        "name": "none",
+        "description": "",
+        "api": "",
+        "tech": [""],
+        "images": [""],
+        "url": "",
+        "repo": "",
+        "desktop": false,
+        "mobile": false
+    },
+    {
+        "name": "none",
+        "description": "",
+        "api": "",
+        "tech": [""],
+        "images": [""],
+        "url": "",
+        "repo": "",
+        "desktop": false,
+        "mobile": false
+    },
+    {
+        "name": "none",
+        "description": "",
+        "api": "",
+        "tech": [""],
+        "images": [""],
+        "url": "",
+        "repo": "",
+        "desktop": false,
+        "mobile": false
+    }
+]

@@ -1,38 +1,45 @@
-.contContactMe {
-    border-radius: 10px;
-    background: linear-gradient(61deg, white, rgb(245, 245, 245));
+.ContContactMe {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    border-top: .5rem solid var(--backColor);
+    border-bottom: .5rem solid var(--backColor);
     display: flex;
     align-items: center;
-    width: 70%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-    padding: 2% 0;
-    margin: 2%;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
 }
-.contacMeForm {
+.contactMeForm {
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 100%;
     height: 100%;
 }
-.contacMeForm > h1 {
+.contactMeForm > h1 {
     height: 10%;
-    border-bottom: 3px solid var(--blue);
+    border-bottom: 3px solid var(--textColor);
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    font-size: 1.5rem;
 }
-.contacMeForm > form {
+.contactMeForm > form {
     height: 80%;
     width: 100%;
     padding-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .formInput {
     width: 70%;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    padding: 2%;
+    padding: .5rem;
     outline: none;
-    margin: 3%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
+    margin: 1rem;
+    font-family: 'Noto Sans';
+    font-size: 1rem;
     transition: all 0.2s ease;
 }
 .formInput:focus {
@@ -40,72 +47,87 @@
 }
 .formInputErr {
     width: 70%;
-    border: 1px solid red;
-    border-radius: 10px;
-    padding: 2%;
+    padding: .5rem;
     outline: none;
-    margin: 3%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
+    margin: 1rem;
+    font-family: 'Noto Sans';
+    font-size: 1rem;
+    border-bottom: 2px solid var(--redColor);
     transition: all 0.2s ease;
 }
 .formText {
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    padding: 3%;
+    padding: .5rem;
     outline: none;
     width: 80%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
+    font-family: 'Noto Sans';
+    font-size: 1rem;
     transition: all 0.2s ease;
     resize: none;
+    margin: 1rem;
 }
 .formText:focus {
     border-color: black;
 }
 .formTextErr {
-    border: 1px solid red;
-    border-radius: 10px;
-    padding: 3%;
+    border-bottom: 2px solid var(--redColor);
+    padding: .5rem;
     outline: none;
     width: 80%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
+    margin: 1rem;
+    font-family: 'Noto Sans';
+    font-size: 1rem;
     transition: all 0.2s ease;
     resize: none;
 
 }
 .formButton {
     margin: 5%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-    padding: 2%;
-    background-color: var(--blue);
-    border: 1px solid black;
-    border-radius: 10px;
-    color: white;
-    transition: all 0.2s ease;
+    font-family: 'Noto Sans';
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--redColor);
+    /* border: 1px solid black; */
+    /* border-radius: 10px; */
+    color: var(--textColor);
+    /* transition: all 0.2s ease; */
 }
 .formButton:hover {
+    filter: brightness(1.1);
     cursor: pointer;
-    padding: 2% 6%;
+    /* padding: 2% 6%; */
+    background-color: red;
+}
+.formButton:active {
+    background-color: var(--redColor);
+    filter: opacity(.8);
 }
 .formButtonDis {
     margin: 5%;
-    font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-    padding: 2%;
+    /* border-radius: 0; */
+    padding: 1rem 2rem;
     background-color: grey;
-    border: 1px solid black;
-    border-radius: 10px;
-    color: white;
+    /* border: 1px solid black; */
+    border-radius: 1px;
+    color: var(--textColor);
+    font-family: 'Noto Sans';
+    font-size: 1rem;
 }
 .errors {
     margin: 3%;
-    color: red;
+    color: var(--redColor);
+    height: 2rem;
+    font-family: 'Noto Sans';
+    font-size: 1rem;
 }
-.contacInfo {
-    align-self: flex-start;
+.contactInfo {
+    /* align-self: flex-start; */
     height: 100%;
-    width: 40%;
+    /* width: 100%; */
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* border: 1px solid red; */
 }
 .info {
     width: 100%;
@@ -114,16 +136,21 @@
     align-items: center;
 }
 .info > h1 {
-    border-bottom: 3px solid var(--blue);
+    border-bottom: 3px solid var(--textColor);
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    font-size: 1.5rem;
 }
 .info > div {
     display: flex;
     width: 100%;
-    font-size: 15px;
+    font-size: 1rem;
 }
 .info > div > h4 {
-    margin: 3% 5%;
-    
+    margin: 3% .5rem;
+    color: var(--textColor);
+    font-size: .9rem;
+    font-family: 'Noto Sans';
 }
 .data {
     font-weight: 400;
@@ -150,10 +177,11 @@
 .links > a > img {
     width: 100%;
     transition: all 0.2s ease;
+    filter: invert(1);
 }
 .links > a:hover > img {
     width: 120%;
-    filter: brightness(.4) invert(0.2) sepia(1) hue-rotate(170deg) saturate(500%);
+    /* filter: brightness(1) invert(0.2) sepia(1) hue-rotate(330deg) saturate(500%); */
 }
 .divButton {
     margin: 5% ;
@@ -164,7 +192,10 @@
     align-items: center;
 }
 .divButton > h3 {
-    border-bottom: 3px solid var(--blue);
+    border-bottom: 3px solid var(--textColor);
+    font-family: 'Noto Sans';
+    font-size: 1.3rem;
+    color: var(--textColor);
 }
 .divButton > div {
     width: 100%;
@@ -174,195 +205,36 @@
 }
 .divButton > div > a {
     text-decoration: none;
-    padding: 2%;
+    color: var(--textColor);
 }
 
-@media screen and (max-width: 1200px) {
-    .contContactMe {
-        width: 90%;
+@media screen and (min-width: 576px) {
+    .ContContactMe {
+        flex-direction: row;
     }
-    
-}
-
-
-@media screen and (max-width: 700px) {
-    .contContactMe {
-        border-radius: 10px;
-        background: linear-gradient(61deg, white, rgb(245, 245, 245));
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        width: 90%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        padding: 2% 0;
-        margin: 2%;
-        text-align: center;
+    .contactMeForm {
+        width: 50%
     }
-    .contacMeForm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 60%;
+    .contactMeForm > h1 {
+        font-size: 1rem;
     }
-    .contacMeForm > h1 {
-        height: 10%;
-        border-bottom: 3px solid var(--blue);
-    }
-    .contacMeForm > form {
-        height: 80%;
-        width: 100%;
-        padding-top: 5%;
-    }
-    .formInput {
-        width: 70%;
-        border: 1px solid rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-        padding: 2%;
-        outline: none;
-        margin: 3%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        transition: all 0.2s ease;
-    }
-    .formInput:focus {
-        border-color: black;
-    }
-    .formInputErr {
-        width: 70%;
-        border: 1px solid red;
-        border-radius: 10px;
-        padding: 2%;
-        outline: none;
-        margin: 3%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        transition: all 0.2s ease;
-    }
-    .formText {
-        border: 1px solid rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-        padding: 3%;
-        outline: none;
-        width: 80%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        transition: all 0.2s ease;
-        resize: none;
-    }
-    .formText:focus {
-        border-color: black;
-    }
-    .formTextErr {
-        border: 1px solid red;
-        border-radius: 10px;
-        padding: 3%;
-        outline: none;
-        width: 80%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        transition: all 0.2s ease;
-        resize: none;
-    
-    }
-    .formButton {
-        margin: 5%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        padding: 2%;
-        background-color: var(--blue);
-        border: 1px solid black;
-        border-radius: 10px;
-        color: white;
-        transition: all 0.2s ease;
-    }
-    .formButton:hover {
-        cursor: pointer;
-        padding: 2% 6%;
-    }
-    .formButtonDis {
-        margin: 5%;
-        font-family: 'Comfortaa', 'Calibri', Helvetica, sans-serif;
-        padding: 2%;
-        background-color: grey;
-        border: 1px solid black;
-        border-radius: 10px;
-        color: white;
-    }
-    .errors {
-        margin: 3%;
-        color: red;
-    }
-    .contacInfo {
+    .contactInfo {
         align-self: flex-start;
-        height: 40%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .info {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 50%;
+        padding: 0;
     }
     .info > h1 {
-        border-bottom: 3px solid var(--blue);
+        font-size: 1rem;
     }
     .info > div {
         display: flex;
-        width: 100%;
-        font-size: 3.5vw;
+        justify-content: center;
+        align-items: center;
     }
+}
+@media screen and (min-width: 768px) {
     .info > div > h4 {
-        margin: 3% 5%;
-        
+        font-size: 1.2rem;
     }
-    .data {
-        font-weight: 400;
-    }
-    .contacMeForm > form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .links {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .links > a {
-        margin: 2%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .links > a > img {
-        width: 100%;
-        transition: all 0.2s ease;
-    }
-    .links > a:hover > img {
-        width: 120%;
-        filter: brightness(.4) invert(0.4) sepia(1) hue-rotate(180deg) saturate(500%);
-    }
-    .divButton {
-        margin: 5% ;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .divButton > h3 {
-        border-bottom: 3px solid var(--blue);
-    }
-    .divButton > div {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .divButton > div > a {
-        text-decoration: none;
-        padding: 2%;
-    }
+
 }

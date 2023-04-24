@@ -1,0 +1,619 @@
+.ContBigCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .5);
+    scroll-behavior: smooth;
+}
+.bigCardContent {
+    background-color: var(--backColor);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    animation: bornBigCard .5s linear;
+}
+.imageDiv {
+    width: 100%;
+    height: 480px;
+    position: relative;
+}
+.imageDiv > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    pointer-events: none;
+    transition: all 1s ease;
+    animation: bornVideo 1s linear;
+    background-color: black;
+}
+.videoHidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: opacity(0);
+    transition: all 1s ease;
+}
+.shadow {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, var(--backColor), transparent, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movieControls {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.movieControls > h2 {
+    margin-left: 2rem;
+    color: white;
+    font-family: 'Noto Sans';
+}
+.controlsButtons {
+    /* border: 1px solid red; */
+    height: 45px;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 65px;
+    gap: 2%;
+}
+.controlsButtons > div {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 100%;
+}
+.controlsButtons > div:first-of-type {
+    /* height: 100%; */
+    margin-left: 2rem;
+    /* width: 8rem; */
+}
+.cardControls {
+    width: 30%;
+    height: 100%;
+}
+.closeButton {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.3rem;
+    height: 2.3rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--backColor); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: opacity(.8);
+    cursor: pointer;
+    padding: 0;
+}
+.closeButton:active {
+    outline: 3px solid white;
+}
+.closeButton > img {
+    /* border: 1px solid red;; */
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: invert(1);
+    /* transform: rotateZ(45deg); */
+}
+.infoDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.infoLeft {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoRight {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.infoRight > div > span > span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.infoStats {
+    width: 100%;
+    height: 30%;
+    color: var(--textColor);
+    font-family: 'Noto Sans';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 6rem; */
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: 500;
+}
+.infoStats > div {
+    width: 3rem;
+    height: 3rem;
+}
+.imgEnabled {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+.imgDisabled {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1) opacity(.5);
+}
+.description{
+    width: 100%;
+    height: 150px;
+    color: var(--textColor);
+    text-align: left;
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+.descriptionOpen {
+    width: 100%;
+    min-height: 150px;
+    color: var(--textColor);
+    text-align: left;
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    position: relative;
+}
+
+.openDescription {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .7), transparent, transparent);
+    cursor: pointer;
+}
+.infoRight > div {
+    width: calc(100% - .5rem - 50px);
+    font-family: 'Noto Sans';
+    font-weight: 300;
+    color: var(--textColor);
+    font-size: .9rem;
+    text-align: left;
+    margin-left: .5rem;
+    margin-right: 50px;
+}
+.infoRight > div:first-of-type {
+    margin-top: 20px;
+}
+.infoRight > div > span:first-of-type {
+    color: rgba(255, 255, 255, .5);
+}
+.episodesBySeasonsDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.headerSeasonsDiv {
+    width: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.headerSeasonsDiv > h2 {
+    color: var(--textColor);
+    font-family: 'Noto Sans';
+    font-weight: 500;
+}
+.headerSeasonsDiv > select {
+    border: 1px solid rgba(255, 255, 255, .3);
+    padding: .5rem 1rem;
+    background-color: rgba(255, 255, 255, .05);
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+.headerSeasonsDiv > select > option {
+    border: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(50, 50, 50);
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    font-size: 1.2rem;
+}
+.episodeLoadingDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.episodeLoading {
+    width: calc(100% - 100px);
+    height: 150px;
+    background-color: rgba(255, 255, 255, .05);
+    border-radius: 5px;
+
+}
+.episodeDiv {
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    width: calc(100% - 100px);
+    margin: 0 50px 0 50px;
+    height: 150px;
+    border-radius: 5px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.episodeDiv:hover {
+    background-color: rgba(255, 255, 255, .05);
+}
+.numberEpisodeDiv {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.numberEpisodeDiv > span {
+    color: var(--textColor);
+    font-family: 'Noto Sans';
+    font-size: 1rem;
+}
+.overviewEpisodeDiv {
+    width: 85%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.imgOverEpisodeDiv {
+    width: 30%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.imgOverEpisodeDiv > img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.imgOverEpisodeDiv > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: opacity(0);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+}
+.imgOverEpisodeDiv > div > div {
+    height: 50%;
+    aspect-ratio: 1/1;
+}
+.episodeDiv:hover > .overviewEpisodeDiv > .imgOverEpisodeDiv > div {
+    filter: opacity(1);
+}
+.overviewContentDiv {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    overflow: hidden;
+}
+.overviewContentDiv > h4 {
+    margin: .5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overviewContentDiv > h4 > span:last-of-type {
+    display: none;
+}
+.overviewContentDiv > p {
+    font-size: .9rem;
+    display: none;
+}
+.runtimeEpisodeDiv {
+    border: 1px solid aqua;
+    width: 10%;
+}
+.similarDiv {
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .2s ease;
+}
+.similarDiv > h2 {
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    text-align: left;
+    margin-left: 50px;
+    align-self: flex-start;
+}
+.similarDiv > div {
+    width: calc(100% - 100px);
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0 50px;
+    border-bottom: 2px solid grey;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease;
+}
+.moreShadow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(0deg, var(--backColor), transparent, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moreButton {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%) rotateZ(-90deg);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .07);
+}
+.moreButton > img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    filter: invert(1);
+}
+.moreButton:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, .3);
+}
+.moreButton:active {
+    outline: 2px solid white;
+}
+.trailersDiv {
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.trailersDiv > h2 {
+    align-self: flex-start;
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    margin-left: 50px;
+}
+.trailersDiv > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+    width: calc(100% - 100px);
+    margin: 0 50px
+}
+.aboutDiv {
+    width: calc(100% - 100px);
+    margin: 0 50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Noto Sans';
+    color: var(--textColor);
+    font-size: .9rem;
+}
+.aboutDiv > div {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+.aboutDiv > div > span {
+    width: 100%;
+    text-align: left;
+}
+.aboutDiv > div > span > span:first-child {
+    color: rgba(255, 255, 255, .5);
+}
+.buttonDeviceEnabled > img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+}
+.buttonDeviceDisabled > img {
+    width: 100%;
+    height: 100%;
+    filter: invert(.5);
+}
+@keyframes bornVideo {
+    0% {
+        filter: opacity(0)
+    }
+    100% {
+        filter: opacity(1);
+    }
+}
+@keyframes bornBigCard {
+    0% {
+        transform: scale(.2);
+        filter: opacity(0)
+    }
+    100% {
+        transform: scale(1);
+        filter: opacity(1)
+    }
+}
+@media screen and (min-width: 576px) {
+    .movieControls > h2 {
+        margin-left: 3rem;
+    }
+    .controlsButtons {
+        width: 25rem;
+    }
+    .controlsButtons > div {
+        width: 10rem;
+    }
+    .controlsButtons > div:first-of-type {
+        margin-left: 3rem;
+        width: 10rem;
+    }
+    .infoDiv {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .infoDivOpen {
+        flex-direction: row;
+    }
+    .infoLeft {
+        width: 65%;
+    }
+    .infoRight {
+        width: 35%
+    }
+    .infoStats {
+        flex-wrap: nowrap;
+    }
+    .infoStats > span:first-of-type {
+        margin-left: 50px;
+        color: var(--greenColor);
+    }
+    .description > p, .descriptionOpen > p {
+        margin-left: 50px;
+        margin-right: 10px;
+    }
+    .openDescription {
+        margin-left: 45px;
+    }
+    .episodeDiv {
+        justify-content: center;
+    }
+    .headerSeasonsDiv {
+        flex-direction: row;
+    }
+    .numberEpisodeDiv {
+        display: flex;
+    }
+    .overviewEpisodeDiv {
+        flex-direction: row;
+    }
+    .overviewContentDiv {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .overviewContentDiv > h4 {
+        justify-content: space-between;
+    }
+    .overviewContentDiv > h4 > span:last-of-type {
+        display: flex;
+    }
+    .overviewContentDiv > p {
+        display: flex;
+    }
+}
+@media screen and (min-width: 768px) {
+    .bigCardContent {
+        width: 62%;
+        top: 30px;
+        min-width: 670px;
+        top: 30px
+    }
+    .movieControls {
+        width: 50%;
+    }
+    .cardControls {
+        width: 50%
+    }
+}

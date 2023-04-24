@@ -1,0 +1,33 @@
+.ContImageViewer {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.imageDiv {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+.imageDiv > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes a {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
