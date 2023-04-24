@@ -62,11 +62,11 @@ export const ProjectCard = React.memo(({ data, modalDiff, first, last, fillBigCa
     return(
         <div ref={previewCardRef} className={data.name === 'none' ? style.none : style.ContProjectCard} onClick={goToDetails} >
             {
-                data && !openPortal &&
+                data &&
                 <img src={data.images[0]} alt={data.name} />
             }
             {
-                data.name !== 'none' &&
+                data.name !== 'none'&& openPortal &&
                 <MiniCard fillBigCard={fillBigCard} data={data} position={ {top: offsets.top, left: offsets.left + diff}} close={closePortal} first={first} last={last}/>
             }
         </div>
