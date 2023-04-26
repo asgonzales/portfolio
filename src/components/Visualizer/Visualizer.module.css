@@ -31,6 +31,17 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+.head {
+    top: 0;
+    left: 0;
+    font-family: 'Noto Sans';
+    color: rgba(255, 255, 255, .5);
+    margin-bottom: auto;
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+}
 .title {
     /* border: 1px solid red; */
     margin-left: 1rem;
@@ -87,6 +98,11 @@
     }
     .infoDiv {
         justify-content: center;
+    }
+    .head {
+        margin-left: 3.5rem;
+        margin-top: 5rem;
+        font-size: 2rem;
     }
     .title {
         margin-left: 3.5rem;

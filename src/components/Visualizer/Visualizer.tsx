@@ -20,6 +20,9 @@ export const Visualizer = ({ setBigCardData }:VisualizerProps) => {
                 <ImageViewer imgs={data[0].images}/>
             </div>
             <div className={style.infoDiv}>
+                <div className={style.head}>
+                    <span>Last Project</span>
+                </div>
                 <div className={style.title}>
                     <h3>{data[0].name}</h3>
                 </div>

@@ -32,6 +32,10 @@
         "img": "/ProjectsData/skillIcons/PostgreSQL.png"
     },
     {
+        "name": "MongoDB",
+        "img": "/ProjectsData/skillIcons/MongoDB.png"
+    },
+    {
         "name": "NodeJS",
         "img": "/ProjectsData/skillIcons/nodeJS.png"
     },
