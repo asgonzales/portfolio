@@ -5,7 +5,7 @@
         "api": "TheMovieDB",
         "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API", "JWT", "reCaptcha", "NodeMailer", "Mongoose", "MongoDB"],
         "images": ["/ProjectsData/images/MovieApp/1.jpg", "/ProjectsData/images/MovieApp/2.jpg", "/ProjectsData/images/MovieApp/3.jpg", "/ProjectsData/images/MovieApp/4.jpg", "/ProjectsData/images/MovieApp/5.jpg", "/ProjectsData/images/MovieApp/6.jpg", "/ProjectsData/images/MovieApp/7.jpg", "/ProjectsData/images/MovieApp/1.jpg"],
-        "url": "https://redirect-ecru.vercel.app/",
+        "url": "https://movieapp-asgonzales.vercel.app/",
         "repo": "https://github.com/asgonzales/Netflix-clon-app",
         "desktop": true,
         "mobile": true
