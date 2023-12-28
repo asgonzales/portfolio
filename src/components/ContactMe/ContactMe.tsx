@@ -2,8 +2,8 @@ import style from './ContactMe.module.css';
 import linkedin from '../../assets/ProjectsData/buttonsIcons/LinkedIn.png';
 import github from '../../assets/ProjectsData/buttonsIcons/Github.png';
 import whatsapp from '../../assets/ProjectsData/buttonsIcons/wsp.png';
-import cv from '../../assets/cvs/cves.pdf';
-import resume from '../../assets/cvs/cven.pdf';
+import cv from '../../assets/cvs/Sebastian Gonzales - Programador.pdf';
+import resume from '../../assets/cvs/Sebastian Gonzales - Developer.pdf';
 import { send } from 'emailjs-com';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 

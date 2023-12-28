@@ -62,5 +62,13 @@
     {
         "name": "Blender",
         "img": "/ProjectsData/skillIcons/Blender.png"
+    },
+    {
+        "name": "Java",
+        "img": "/ProjectsData/skillIcons/Java.png"
+    },
+    {
+        "name": "SpringBoot",
+        "img": "/ProjectsData/skillIcons/SpringBoot.png"
     }
 ]
