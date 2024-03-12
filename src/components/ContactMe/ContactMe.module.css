@@ -1,9 +1,6 @@
 .ContContactMe {
-    background-color: black;
     width: 100%;
     text-align: center;
-    border-top: .5rem solid var(--backColor);
-    border-bottom: .5rem solid var(--backColor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,194 +15,18 @@
     width: 100%;
     height: 100%;
 }
-.contactMeForm > h1 {
-    height: 10%;
-    border-bottom: 3px solid var(--textColor);
-    font-family: 'Noto Sans';
-    color: var(--textColor);
-    font-size: 1.5rem;
-}
 .contactMeForm > form {
     height: 80%;
     width: 100%;
     padding-top: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
-.formInput {
-    width: 70%;
-    padding: .5rem;
-    outline: none;
-    margin: 1rem;
-    font-family: 'Noto Sans';
-    font-size: 1rem;
-    transition: all 0.2s ease;
-}
-.formInput:focus {
-    border-color: black;
-}
-.formInputErr {
-    width: 70%;
-    padding: .5rem;
-    outline: none;
-    margin: 1rem;
-    font-family: 'Noto Sans';
-    font-size: 1rem;
-    border-bottom: 2px solid var(--redColor);
-    transition: all 0.2s ease;
-}
-.formText {
-    padding: .5rem;
-    outline: none;
-    width: 80%;
-    font-family: 'Noto Sans';
-    font-size: 1rem;
-    transition: all 0.2s ease;
-    resize: none;
-    margin: 1rem;
-}
-.formText:focus {
-    border-color: black;
-}
-.formTextErr {
-    border-bottom: 2px solid var(--redColor);
-    padding: .5rem;
-    outline: none;
-    width: 80%;
-    margin: 1rem;
-    font-family: 'Noto Sans';
-    font-size: 1rem;
-    transition: all 0.2s ease;
-    resize: none;
 
-}
-.formButton {
-    margin: 5%;
-    font-family: 'Noto Sans';
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    background-color: var(--redColor);
-    /* border: 1px solid black; */
-    /* border-radius: 10px; */
-    color: var(--textColor);
-    /* transition: all 0.2s ease; */
-}
-.formButton:hover {
-    filter: brightness(1.1);
-    cursor: pointer;
-    /* padding: 2% 6%; */
-    background-color: red;
-}
-.formButton:active {
-    background-color: var(--redColor);
-    filter: opacity(.8);
-}
-.formButtonDis {
-    margin: 5%;
-    /* border-radius: 0; */
-    padding: 1rem 2rem;
-    background-color: grey;
-    /* border: 1px solid black; */
-    border-radius: 1px;
-    color: var(--textColor);
-    font-family: 'Noto Sans';
-    font-size: 1rem;
-}
 .errors {
     margin: 3%;
     color: var(--redColor);
     height: 2rem;
     font-family: 'Noto Sans';
     font-size: 1rem;
-}
-.contactInfo {
-    /* align-self: flex-start; */
-    height: 100%;
-    /* width: 100%; */
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 1px solid red; */
-}
-.info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.info > h1 {
-    border-bottom: 3px solid var(--textColor);
-    font-family: 'Noto Sans';
-    color: var(--textColor);
-    font-size: 1.5rem;
-}
-.info > div {
-    display: flex;
-    width: 100%;
-    font-size: 1rem;
-}
-.info > div > h4 {
-    margin: 3% .5rem;
-    color: var(--textColor);
-    font-size: .9rem;
-    font-family: 'Noto Sans';
-}
-.data {
-    font-weight: 400;
-}
-.contacMeForm > form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.links {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.links > a {
-    margin: 2%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.links > a > img {
-    width: 100%;
-    transition: all 0.2s ease;
-    filter: invert(1);
-}
-.links > a:hover > img {
-    width: 120%;
-    /* filter: brightness(1) invert(0.2) sepia(1) hue-rotate(330deg) saturate(500%); */
-}
-.divButton {
-    margin: 5% ;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.divButton > h3 {
-    border-bottom: 3px solid var(--textColor);
-    font-family: 'Noto Sans';
-    font-size: 1.3rem;
-    color: var(--textColor);
-}
-.divButton > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.divButton > div > a {
-    text-decoration: none;
-    color: var(--textColor);
 }
 
 @media screen and (min-width: 576px) {
@@ -215,26 +36,4 @@
     .contactMeForm {
         width: 50%
     }
-    .contactMeForm > h1 {
-        font-size: 1rem;
-    }
-    .contactInfo {
-        align-self: flex-start;
-        width: 50%;
-        padding: 0;
-    }
-    .info > h1 {
-        font-size: 1rem;
-    }
-    .info > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media screen and (min-width: 768px) {
-    .info > div > h4 {
-        font-size: 1.2rem;
-    }
-
 }

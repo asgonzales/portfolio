@@ -4,9 +4,13 @@ import { debounce } from '../../utils/functions';
 
 
 
+type NavBarProps = {
+    color: string
+    darkColor: string
+    changeColors : () => void
+}
 
-
-export default function NavBar () {
+export default function NavBar ({ color, darkColor, changeColors }:NavBarProps) {
 
     const openMobileMenuRef = useRef<HTMLDivElement>(null)
     const [isMobile, setIsMobile] = useState(false)
@@ -53,33 +57,53 @@ export default function NavBar () {
 
     if(isMobile) {
         return (
-            <div className={navBarScroll ? style.ContNavBarScroll : style.ContNavBar}>
+            <div className={`${navBarScroll ? style.ContNavBarScroll : style.ContNavBar} 
+             border-b-2 z-10`}
+             style={{
+                backgroundColor: darkColor,
+                borderColor: color,
+                transition: "all 5s ease"
+             }}
+            >
                 <div onClick={openMobileMenuController} className={style.menu}>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <div className={style.homeImageLink}>
-                    <span>Portfolio</span>
+                <div className={`${style.homeImageLink}`}>
+                    <span className="font-bold text-xl">Portfolio</span>
                 </div>
+                {/* <button className="w-32 mr-0 ml-auto" onClick={changeColors}>color</button> */}
                 {
                     openMobileMenu &&
-                    <div className={style.contLinks}>
-                        <div ref={openMobileMenuRef} className={style.mobileLinks}>
-                            <div className={style.userMenuMobile}>
-
-                            </div>
-                            <a href='#Projects' className={style.link}>
-                                Projects
+                    <div className={style.contLinks}
+                    >
+                        <div ref={openMobileMenuRef} className={style.mobileLinks}
+                         style={{
+                            transition: "all 5s ease",
+                            backgroundColor: darkColor,
+                            borderRight: `2px solid ${color}`
+                         }}
+                        >
+                            <a href='#Start' className="w-44
+                             font-bold p-4 text-xl"
+                            >
+                                Inicio
                             </a>
-                            <a  href='#Tech' className={style.link}>
-                                Technologies
+                            <a href='#Projects' className="w-44
+                             font-bold p-4 text-xl"
+                            >
+                                Proyectos
                             </a>
-                            <a href='#AboutMe' className={style.link}>
-                                About me
+                            <a  href='#Tech' className="w-44
+                             font-bold p-4 text-xl"
+                            >
+                                Tecnologías
                             </a>
-                            <a href="#ContactMe" className={style.link}>
-                                Contact me
+                            <a href="#ContactMe" className="w-44
+                             font-bold p-4 text-xl"
+                            >
+                                Contáctame
                             </a>
                         </div>
                     </div>
@@ -89,23 +113,33 @@ export default function NavBar () {
     }
     else {
         return (
-            <div className={navBarScroll ? style.ContNavBarScroll : style.ContNavBar}>
-                <div className={style.links}>
+            <div className={`${navBarScroll ? style.ContNavBarScroll : style.ContNavBar}  
+             border-b-2`}
+             style={{
+                background: `${!navBarScroll ? `linear-gradient(0deg, transparent, black)` : darkColor}`,
+                borderColor: color,
+                transition: "all 5s ease"
+             }}
+            >
+                <div className={style.links}
+                 
+                >
                     <div className={style.homeImageLink}>
                         <span>Portfolio</span>
                     </div>
+                    <a href='#Start' className={style.link}>
+                        Inicio
+                    </a>
                     <a href='#Projects' className={style.link}>
-                        Projects
+                        Proyectos
                     </a>
                     <a  href='#Tech' className={style.link}>
-                        Technologies
-                    </a>
-                    <a href='#AboutMe' className={style.link}>
-                        About me
+                        Tecnologías
                     </a>
                     <a href="#ContactMe" className={style.link}>
-                        Contact me
+                        Contáctame
                     </a>
+                    {/* <button className="" onClick={changeColors}>color</button> */}
                 </div>
             </div>
         )

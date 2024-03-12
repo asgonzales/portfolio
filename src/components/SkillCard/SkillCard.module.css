@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     margin: 3%;
-    background-color: var(--textColor   );
     transition: all 0.2s ease;
     transform: rotateX(-25deg);
     box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.2);
@@ -19,7 +18,6 @@
     animation: cardSelected 3s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 .contImg {
-    border-bottom: 1px solid var(--redColor);
     width: 100%;
     height: 80%;
     display: flex;
@@ -32,7 +30,6 @@
     object-fit: contain;
 }
 .contName {
-    background-color: var(--redColor);
     color: white;
     display: flex;
     justify-content: center;
@@ -50,18 +47,18 @@
     }
     20% {
         transform: rotateX(25deg) rotateY(-25deg);
-        box-shadow: inset 0 0 15px -5px rgba(255, 255, 255, 1), 15px 15px 0 0 var(--textColor);
+        box-shadow: inset 0 0 15px -5px rgba(255, 255, 255, 1), 15px 15px 0 0 rgb(200, 200, 200);
     }
     40% {
         transform: rotateX(25deg) rotateY(25deg);
-        box-shadow: inset 0 0 15px -5px rgba(255, 255, 255, 1), -15px 15px 0 0 var(--textColor);
+        box-shadow: inset 0 0 15px -5px rgba(255, 255, 255, 1), -15px 15px 0 0 rgb(200, 200, 200);
     }
     60% {
-        box-shadow: inset 25px 55px 15px -5px rgba(0, 0, 0, 0.1), -15px -15px 0 0 var(--textColor);
+        box-shadow: inset 25px 55px 15px -5px rgba(0, 0, 0, 0.1), -15px -15px 0 0 rgb(200, 200, 200);
         transform: rotateX(-25deg) rotateY(25deg);
     }
     80% {
-        box-shadow: inset -25px 55px 15px -5px rgba(0, 0, 0, 0.1), 15px -15px 0 0 var(--textColor);
+        box-shadow: inset -25px 55px 15px -5px rgba(0, 0, 0, 0.1), 15px -15px 0 0 rgb(200, 200, 200);
         transform: rotateX(-25deg) rotateY(-25deg);
     }
     100% {

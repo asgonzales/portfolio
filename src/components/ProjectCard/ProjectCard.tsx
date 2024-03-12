@@ -1,74 +1,70 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { acumulativeOffset, debounce, getVW, isMobileDevice } from '../../utils/functions'
-import { ProjectCardInterface } from '../../utils/types'
-import { MiniCard } from '../MiniCard/MiniCard'
-import style from './ProjectCard.module.css'
+import { ProjectCardInterface } from "../../utils/types"
+import { ImageViewer } from "../ImageViewer/ImageViewer"
 
-
-interface ProjectCardProps {
-    data: ProjectCardInterface
-    modalDiff?: boolean
-    first?: boolean
-    last?: boolean
-    fillBigCard: (a:ProjectCardInterface) => void
+type ProjectCardProps = {
+    project:ProjectCardInterface
+    color: string
+    darkColor: string
+    lightColor: string
+    openInfo:(a:ProjectCardInterface) => void
 }
-
-export const ProjectCard = React.memo(({ data, modalDiff, first, last, fillBigCard }:ProjectCardProps) => {
-
-    const previewCardRef = useRef<HTMLDivElement>(null) 
-    const [isMobile, setIsMobile] = useState(false)
-    const [openPortal, setOpenPortal] = useState(false)
-    const [offsets, setOffsets] = useState({
-        top: 0,
-        left: 0 
-    })
-    const [diff, setDiff] = useState(0)
-
-    useEffect(() => {
-        setIsMobile(isMobileDevice())
-        window.addEventListener('resize', debounce(() => {
-            setIsMobile(isMobileDevice())
-            if(previewCardRef.current) setOffsets(acumulativeOffset(previewCardRef.current))
-        }, 500))
-    }, [])
-    
-    //Apertura del modal
-    useEffect(() => {
-        if(previewCardRef.current) { 
-            if(!isMobile) {
-                previewCardRef.current.onmouseenter = () => {
-                    if(previewCardRef.current) {
-                        setOffsets(acumulativeOffset(previewCardRef.current))
-                        if(modalDiff) {
-                            const dif = ((getVW(14.8) * - 6) - 36) //Formula donde 6 es la cantidad de cards renderizadas, 36 es el gap de la lista (6) por la cantidad de cartas mostradas
-                            setDiff(dif)
-                        }
-                    }
-                    setOpenPortal(true)
-                }
-            }
-            else previewCardRef.current.onmouseenter = null
-        }
-    }, [previewCardRef.current, isMobile, modalDiff])
-
-    const closePortal = () => {
-        setOpenPortal(false)
-    }
-    const goToDetails = () => {
-        if(isMobile && data) {
-            fillBigCard(data)
-        }
-    }
+export default function ProjectCard({ project, color, darkColor, lightColor, openInfo }:ProjectCardProps) {
     return(
-        <div ref={previewCardRef} className={data.name === 'none' ? style.none : style.ContProjectCard} onClick={goToDetails} >
-            {
-                data &&
-                <img src={data.images[0]} alt={data.name} />
-            }
-            {
-                data.name !== 'none'&& openPortal &&
-                <MiniCard fillBigCard={fillBigCard} data={data} position={ {top: offsets.top, left: offsets.left + diff}} close={closePortal} first={first} last={last}/>
-            }
-        </div>
+        <section className="w-full min-h-96 h-auto border-2 flex flex-col items-center justify-center gap-2 p-2
+         md:border-4 md:flex-row-reverse md:min-h-32 md:h-60 md:w-auto z-10
+         "
+         style={{
+            transition: "all 5s ease",
+            borderColor: color,
+            boxShadow: `inset 0 0 7px  ${color}, 0 0 7px rgb(${lightColor}, .3)`
+         }}
+        >
+            <div className="h-1/2 w-full relative overflow-hidden
+            md:h-full md:w-96"
+            >
+                <ImageViewer imgs={project.images} />
+            </div>
+            <div className="h-1/2 w-full flex flex-col items-center gap-2 p-2
+             md:h-full md:w-96"
+            >
+                <h3 className="text-3xl font-semibold"
+                 style={{
+                    transition: "all 5s ease",
+                    color: `rgb(${lightColor})`
+                 }}
+                >{project.name}</h3>
+                <p className="">{project.shortDesc}</p>
+                <div className="flex flex-col items-center gap-2 w-full p-2 mt-2
+                 md:flex-row md:justify-evenly"
+                >
+                    <button
+                    className="text-lg font-semibold py-2 px-4 border-2 rounded-md
+                     transition-all
+                     hover:px-6
+                     "
+                     style={{
+                        transition: "all 5s ease",
+                        borderColor: color,
+                        backgroundColor: color
+                     }}
+                     onClick={() => openInfo(project)}
+                    >Ver más</button>
+                    <a 
+                     className="text-lg font-bold py-2 px-4 border-2 rounded-md
+                     transition-all
+                     hover:px-6
+                     "
+                     href={project.url}
+                     target='_blank' rel="noopener noreferrer"
+                     style={{
+                        transition: "all 5s ease",
+                        borderColor: "white",
+                        backgroundColor: "white",
+                        color: darkColor,
+                     }}
+                    >Ir al proyecto</a>
+                </div>
+            </div>
+        </section>
     )
-})
+}

@@ -1,9 +1,4 @@
 import style from './ContactMe.module.css';
-import linkedin from '../../assets/ProjectsData/buttonsIcons/LinkedIn.png';
-import github from '../../assets/ProjectsData/buttonsIcons/Github.png';
-import whatsapp from '../../assets/ProjectsData/buttonsIcons/wsp.png';
-import cv from '../../assets/cvs/Sebastian Gonzales - Programador.pdf';
-import resume from '../../assets/cvs/Sebastian Gonzales - Developer.pdf';
 import { send } from 'emailjs-com';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
@@ -11,12 +6,13 @@ import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
 
 
+type ContactMeProps = {
+    color: string
+    darkColor: string
+    lightColor: string
+}
 
-
-export default function ContactMe () {
-    const urlLinkedin = 'https://www.linkedin.com/in/asgonzalesr/';
-    const urlGithub = 'https://github.com/asgonzales';
-    const urlWhatsapp = 'https://api.whatsapp.com/send?phone=541123833611';
+export default function ContactMe ({ color, darkColor, lightColor }:ContactMeProps) {
     const regexemail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     const errorsRef = useRef<HTMLLabelElement>(null)
@@ -39,13 +35,12 @@ export default function ContactMe () {
         if(errorsRef.current) {
             if(e.target.value !== '') {
                 setNamePass(true)
-                e.target.className = style.formInput
                 errorsRef.current.innerText = ''
             }
             else {
                 setNamePass(false)
-                e.target.className = style.formInputErr
-                errorsRef.current.innerText = 'Please insert your name'
+                e.target.style.borderColor = color
+                errorsRef.current.innerText = 'Por favor ingrese su nombre.'
             }
         }
     }
@@ -57,13 +52,12 @@ export default function ContactMe () {
         if(errorsRef.current) {
             if(regexemail.test(e.target.value)) {
                 setEmailPass(true)
-                e.target.className = style.formInput
                 errorsRef.current.innerText = ''
             }
             else {
                 setEmailPass(false)
-                errorsRef.current.innerText = 'Please insert a valid e-mail'
-                e.target.className = style.formInputErr
+                errorsRef.current.innerText = 'Por favor ingrese un e-mail válido.'
+                e.target.style.borderColor = color
             }
         }
     }
@@ -76,81 +70,107 @@ export default function ContactMe () {
             if(e.target.value !== '') {
                 setMessagePass(true)
                 errorsRef.current.innerText = ''
-                e.target.className = style.formText
             }
             else {
                 setMessagePass(false)
-                errorsRef.current.innerText = 'Please leave a message'
-                e.target.className = style.formTextErr
+                errorsRef.current.innerText = 'Por favor escriba un mensaje.'
+                e.target.style.borderColor = color
             }
         }
     }
 
-    const submitForm = (e:FormEvent<HTMLFormElement>) => {
+    const submitForm = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        send(
-            'service_0wk06k4',
-            'template_6ahxthg',
-            data,
-            '9ZL94e6jtn2wYrWXl'
-        )
+        try {
+            if(errorsRef.current) {
+                errorsRef.current.innerText = 'Enviando el mail...'
+            }
+            await send(
+                'service_0wk06k4',
+                'template_6ahxthg',
+                data,
+                '9ZL94e6jtn2wYrWXl'
+            )
+            if(errorsRef.current) {
+                errorsRef.current.innerText = 'Enviado!'
+            }
+        } catch(ex) {
+            if(errorsRef.current) {
+                errorsRef.current.innerText = 'Ocurrió un error al enviar el mail :('
+            }
+            console.log(ex)
+        }
     }
 
     useEffect(() => {
         if(submitButtonFormRef.current) {
             if (namePass && emailPass && messagePass) {
                 submitButtonFormRef.current.disabled = false;
-                submitButtonFormRef.current.className = style.formButton;
+                submitButtonFormRef.current.style.borderColor = color;
+                submitButtonFormRef.current.style.backgroundColor = color;
             }
             else {
                 submitButtonFormRef.current.disabled = true;
-                submitButtonFormRef.current.className = style.formButtonDis;    
+                submitButtonFormRef.current.style.borderColor = darkColor;
+                submitButtonFormRef.current.style.backgroundColor = darkColor;
             }
         }
     }, [namePass, emailPass, messagePass])
 
     return( 
-        <div id='ContactMe' className={style.ContContactMe}>
+        <div id='ContactMe' className={`${style.ContContactMe} 
+         border-y-2 p-4`}
+         style={{
+            transition: "all 5s ease",
+            borderColor: color
+         }}
+        >
             <div className={style.contactMeForm}>
-                <h1>Contact Me!</h1>
-                <form onSubmit={(e) => submitForm(e)}>
-                    <input className={style.formInput} type="text" placeholder='name' onChange={(e) => handleName(e)}/>
-                    <input className={style.formInput} type="text" placeholder='email' onChange={(e) => handleEmail(e)}/>
-                    <textarea className={style.formText} rows={5} cols={2} placeholder='message' onChange={(e) => handleMessage(e)}/>
+                <h1 className="text-3xl font-bold"
+                 style={{
+                    transition: "all 5s ease",
+                    color: `rgb(${lightColor})`
+                 }}
+                >Contáctame!</h1>
+                <form className=" flex items-center justify-center gap-4 flex-col" onSubmit={(e) => submitForm(e)}>
+                    <input className={`w-full h-10 p-2 border-2 rounded-md`}
+                     style={{
+                        borderColor: `rgb(${lightColor})`,
+                        backgroundColor: darkColor,
+                        transition: "all 5s ease",                        
+                     }} 
+                     type="text" placeholder='Nombre' onChange={(e) => handleName(e)}/>
+                    <input className={`w-full h-10 p-2 border-2 rounded-md`}
+                     style={{
+                        borderColor: `rgb(${lightColor})`,
+                        backgroundColor: darkColor,
+                        transition: "all 5s ease",                        
+                     }} 
+                     type="text" placeholder='Email' onChange={(e) => handleEmail(e)}/>
+                    <textarea className={`w-full p-2 border-2 rounded-md`}
+                     style={{
+                        borderColor: `rgb(${lightColor})`,
+                        backgroundColor: darkColor,
+                        transition: "all 5s ease",                        
+                     }} 
+                    rows={5} cols={2} placeholder='Mensaje' onChange={(e) => handleMessage(e)}/>
                     <label ref={errorsRef} className={style.errors}></label>
-                    <input disabled ref={submitButtonFormRef} className={style.formButton} type="submit" value='Send' />
+                    <div className="w-32 h-16 flex items-center justify-center">
+                        <input disabled ref={submitButtonFormRef} 
+                        className="border-2 py-2 px-4 rounded-md
+                        text-xl font-bold mb-4 cursor-pointer
+                        transition-all
+                        hover:px-8
+                        active:py-0 active:px-4"
+                        style={{
+                            transition: "all 5s ease",
+                            borderColor: color,
+                            backgroundColor: color,
+                            color: "white"
+                        }} 
+                        type="submit" value='Enviar' />
+                    </div>
                 </form>
-            </div>
-            <div className={style.contactInfo}>
-                <div className={style.info}>
-                    <h1>Contact Info</h1>
-                    <div>
-                        <h4>Phone: </h4>
-                        <h4 className={style.data}>+54 9 11 23833611</h4>
-                    </div>
-                    <div>
-                        <h4>Email: </h4>
-                        <h4 className={style.data}>asgonzalesromani@gmail.com</h4>
-                    </div>
-                </div>
-                <div className={style.links}>
-                    <a href={urlLinkedin} target="_blank" rel="noopener noreferrer">
-                        <img src={linkedin} alt="linkedin" />
-                    </a>
-                    <a href={urlGithub} target='_blank' rel="noopener noreferrer">
-                        <img src={github} alt="github" />
-                    </a>
-                    <a href={urlWhatsapp} target='_blank' rel="noopener noreferrer">
-                        <img src={whatsapp} alt="whatsapp" />
-                    </a>
-                </div>
-                <div className={style.divButton}> 
-                    <h3> Download CV/Resume</h3>
-                    <div>
-                        <a href={cv} download className={style.formButton} title='Español'>ES</a>
-                        <a href={resume} download className={style.formButton} title='English'>EN</a>
-                    </div>
-                </div>
             </div>
         </div>
     )

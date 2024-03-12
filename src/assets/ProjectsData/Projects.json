@@ -1,7 +1,8 @@
 ﻿[
     {
         "name": "MovieApp",
-        "description": "An application where you can search for information about movies and series. Netflix Clone",
+        "shortDesc": "Clon de Netflix para ver información de películas y series.",
+        "description": "Una aplicación donde puedes buscar películas y series para ver su información. Repliqué la estética de Netflix y algunas funciones como tener diferentes perfiles por usuario, likes en películas y series, lista de favoritos. En este proyecto me centré en profundizar mis conocimientos en CSS y Javascript para las animaciones de las listas de series y películas y la proyección de trailers desde youtube.",
         "api": "TheMovieDB",
         "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API", "JWT", "reCaptcha", "NodeMailer", "Mongoose", "MongoDB"],
         "images": ["/ProjectsData/images/MovieApp/1.jpg", "/ProjectsData/images/MovieApp/2.jpg", "/ProjectsData/images/MovieApp/3.jpg", "/ProjectsData/images/MovieApp/4.jpg", "/ProjectsData/images/MovieApp/5.jpg", "/ProjectsData/images/MovieApp/6.jpg", "/ProjectsData/images/MovieApp/7.jpg", "/ProjectsData/images/MovieApp/1.jpg"],
@@ -12,7 +13,8 @@
     },
     {
         "name": "Cat Wiki",
-        "description": "An application where you can search for cat images and information about breeds.",
+        "shortDesc": "Una wiki de imágenes de gatitos.",
+        "description": "Una aplicación web simple para ver fotos de gatos e información sobre algunas razas.",
         "api": "The Cat API",
         "tech": ["React", "Typescript", "Redux Toolkit", "express", "NodeJS", "REST API", "Mobile First"],
         "images": ["/ProjectsData/images/CatWiki/1.jpg", "/ProjectsData/images/CatWiki/2.jpg", "/ProjectsData/images/CatWiki/3.jpg", "/ProjectsData/images/CatWiki/4.jpg"],
@@ -23,7 +25,8 @@
     },
     {
         "name": "FinnApp",
-        "description": "A simple application that helps you to control your expenses. You cand add, modify and delete an operation, see the total cash available and search in the history. App made as challenge from Alkemy. I also added features like autentication with Google, token sent in cookie, refresh jwt and statistics with charts.",
+        "shortDesc": "Aplicación web para control de gastos.",
+        "description": "Una aplicación web simple que ayuda a controlar los gastos. Cuenta con un ABM de operaciones, ver el dinero total disponible y búsqueda por historial. Además muestra estadísticas en gráficos para tener una mejor visión de los gastos en un determinado tiempo. En este proyecto me centré en entender el funcionamiento de los JWT para autenticación de usuario.",
         "api": "",
         "tech": ["React", "Redux", "GoogleAuth", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "REST API", "Cookies", "Mobile First", "Dark Mode"],
         "images": ["/ProjectsData/images/FinnApp/1.jpg", "/ProjectsData/images/FinnApp/2.jpg", "/ProjectsData/images/FinnApp/3.jpg", "/ProjectsData/images/FinnApp/4.jpg"],
@@ -34,7 +37,8 @@
     },
     {
         "name": "Plus Hardware e‑commerce",
-        "description": "E-commerce made for hardware products. It has the Mercadopago payment method, hierarchy and restriction by user role (buyer, seller, admin), geolocation for sucursal, Auth with Google, Wishlits, reviews and purchase orders by user and mailing system. This was a grupal project where I was responsible for the auth with Google, part of the geolocaton system, hierarchy and restriction by user role and the design. This was one of my first projects and now I'm working on a new version.",
+        "shortDesc": "E-commerce hecho en equipo como proyecto final.",
+        "description": "Este fue un proyecto que hice en grupo en un curso de programación. Se trataba de un e-commerce de hardware. Contaba con métodos de pago como mercadopago, jerarquía y restricción por roles de usuario (comprador, vendedor, administrador). Además tenía caráctericas de geolocalización por sucursal, inicio de sesión con Google, lista de deseados, reviews y sistema de mail para las compras de los usuarios. Actualmente el backend no se encuentra disponible ya que, como fue hecho en grupo, algunas keys y cuentas de apis quedó en mano de mis compañeros en ese entonces y en lugar rehacer las partes faltantes decidí hacer un proyecto similar con nuevas tecnologías.",
         "api": "",
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "JWT", "Leaflet", "GoogleAuth", "NodeMailer", "REST API"],
         "images": ["/ProjectsData/images/PlusHardware/1.jpg"],
@@ -45,7 +49,8 @@
     },
     {
         "name": "3D Portfolio",
-        "description": "My 3D Portfolio",
+        "shortDesc": "Mi porftolio 3D.",
+        "description": "Mi portfolio 3D, la primera vez que junté mis gustos de programación y modelado 3D.",
         "api": "",
         "tech": ["React", "Redux", "ThreeJS", "React Three Fiber"],
         "images": ["/ProjectsData/images/3DPortfolio/1.jpg", "/ProjectsData/images/3DPortfolio/2.jpg", "/ProjectsData/images/3DPortfolio/3.jpg", "/ProjectsData/images/3DPortfolio/4.jpg", "/ProjectsData/images/3DPortfolio/5.jpg", "/ProjectsData/images/3DPortfolio/6.jpg"],
@@ -56,7 +61,8 @@
     },
     {
         "name": "2D Portfolio",
-        "description": "My 2D Portfolio",
+        "shortDesc": "Mi porftolio 2D.",
+        "description": "Mi portfolio 2D, o sea, ésta página :D",
         "api": "",
         "tech": ["React"],
         "images": ["/ProjectsData/images/2DPortfolio/1.jpg", "/ProjectsData/images/2DPortfolio/2.jpg", "/ProjectsData/images/2DPortfolio/3.jpg", "/ProjectsData/images/2DPortfolio/4.jpg"],
@@ -67,7 +73,8 @@
     },
     {
         "name": "Country App",
-        "description": "A SPA where you can search and filter different countries, see their information and create different toristic activities for each one. This was my second project where I learned how to use PostgreSQL.",
+        "shortDesc": "Aplicación web sobre países.",
+        "description": "Una Aplicación Web Simple donde puedes buscar y filtrar diferentes países, ver su información y crear diferentes actividades turísticas. Este fue mi segundo proyecto donde aprendí a usar una base de datos, PostgreSQL.",
         "api": "REST Countries",
         "tech": ["React", "Redux", "Express", "Sequelize", "PostgreSQL", "NodeJS", "REST API"],
         "images": ["/ProjectsData/images/CountryApp/1.jpg"],
@@ -78,57 +85,14 @@
     },
     {
         "name": "Wheater App",
-        "description": "A simple page that allows you to search different countries and their respective climate information. This was my first app where I learned to call an API.",
+        "shortDesc": "Aplicación web de clima.",
+        "description": "Una simple aplicación web que le permie al usuario buscar la información del clima en distintos lugares. Esta fue mi primera app donde aprendí principalmente llamar a APIS y animaciones con CSS.",
         "api": "OpenWeatherMap",
         "tech": ["React"],
         "images": ["/ProjectsData/images/WeatherApp/1.jpg"],
         "url": "https://weather-app-tau-beige.vercel.app/",
         "repo": "https://github.com/asgonzales/Weather_App",
         "desktop": true,
-        "mobile": false
-    },
-    {
-        "name": "none",
-        "description": "",
-        "api": "",
-        "tech": [""],
-        "images": [""],
-        "url": "",
-        "repo": "",
-        "desktop": false,
-        "mobile": false
-    },
-    {
-        "name": "none",
-        "description": "",
-        "api": "",
-        "tech": [""],
-        "images": [""],
-        "url": "",
-        "repo": "",
-        "desktop": false,
-        "mobile": false
-    },
-    {
-        "name": "none",
-        "description": "",
-        "api": "",
-        "tech": [""],
-        "images": [""],
-        "url": "",
-        "repo": "",
-        "desktop": false,
-        "mobile": false
-    },
-    {
-        "name": "none",
-        "description": "",
-        "api": "",
-        "tech": [""],
-        "images": [""],
-        "url": "",
-        "repo": "",
-        "desktop": false,
         "mobile": false
     }
 ]
