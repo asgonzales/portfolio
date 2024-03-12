@@ -10,7 +10,7 @@ type NavBarProps = {
     changeColors : () => void
 }
 
-export default function NavBar ({ color, darkColor, changeColors }:NavBarProps) {
+export default function NavBar ({ color, darkColor }:NavBarProps) {
 
     const openMobileMenuRef = useRef<HTMLDivElement>(null)
     const [isMobile, setIsMobile] = useState(false)

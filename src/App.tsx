@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import BigCard from './components/BigCard/BigCard'
 import ContactMe from './components/ContactMe/ContactMe'
