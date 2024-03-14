@@ -1,5 +1,17 @@
 ﻿[
     {
+        "name": "3D model shop",
+        "shortDesc": "EN DESARROLLO. Tienda de modelos 3D.",
+        "description": "EN DESARROLLO. Aplicación web donde podrás comprar modelos para impresión 3D.",
+        "api": "",
+        "tech": ["React", "Typescript", "Next.js 14", "Java", "Spring Boot", "Spring Security"],
+        "images": ["/ProjectsData/images/Shop/1.png"],
+        "url": "https://shop-asgonzales.vercel.app/",
+        "repo": "",
+        "desktop": true,
+        "mobile": false
+    },
+    {
         "name": "MovieApp",
         "shortDesc": "Clon de Netflix para ver información de películas y series.",
         "description": "Una aplicación donde puedes buscar películas y series para ver su información. Repliqué la estética de Netflix y algunas funciones como tener diferentes perfiles por usuario, likes en películas y series, lista de favoritos. En este proyecto me centré en profundizar mis conocimientos en CSS y Javascript para las animaciones de las listas de series y películas y la proyección de trailers desde youtube.",
